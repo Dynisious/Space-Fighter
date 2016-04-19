@@ -54,10 +54,11 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>C:\Users\danie_000\Documents\GitHub\DynMaths\DynMaths\Exported Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\danie_000\Documents\GitHub\Dyn_API\Dyn_API\Exported Headers;C:\Users\danie_000\Documents\GitHub\Space Fighter\Space Fighter\Space Fighter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>CollidableObject.obj;Entity.obj;ImmortalObject.obj;ImmortalShip.obj;KineticObject.obj;LivingObject.obj;MortalObject.obj;MortalShip.obj;Mountable.obj;MountObject.obj;PositionObject.obj;Ship.obj;ThrustSubSystem.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\danie_000\Documents\GitHub\Space Fighter\Space Fighter\Space Fighter\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -86,6 +87,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ObjectTypes_tests.cpp" />
+    <ClCompile Include="SubSystems_tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
@@ -98,6 +100,9 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Dyn_API\Dyn_API\Dyn_API.vcxproj">
+      <Project>{3b1dd99c-c877-42d4-9587-e25ffb1a3df3}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\Space Fighter.vcxproj">
       <Project>{249a22e4-4981-45b8-805a-dda51f5c08d1}</Project>
     </ProjectReference>
